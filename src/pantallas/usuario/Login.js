@@ -52,16 +52,16 @@ const Login = ({ navigation }) => {
       <View style={styles.buttonGroup}>
         {error ? <Error message={error} /> : null}
         <EasyButton medium primary onPress={() => handleSubmit()}>
-          <Text style={{ color: 'white' }}>Sign In</Text>
+          <Text style={{ color: 'white' }}>Iniciar Sesion</Text>
         </EasyButton>
         <View style={[{ marginTop: 40 }, styles.buttonGroup]}>
-          <Text style={styles.middleText}>Don't have an account yet?</Text>
+          <Text style={styles.middleText}>No tiene cuenta?</Text>
           <EasyButton
             medium
             primary
             onPress={() => navigation.navigate('Register')}
           >
-            <Text style={{ color: 'white' }}>Sign Up</Text>
+            <Text style={{ color: 'white' }}>Registrarse</Text>
           </EasyButton>
         </View>
       </View>

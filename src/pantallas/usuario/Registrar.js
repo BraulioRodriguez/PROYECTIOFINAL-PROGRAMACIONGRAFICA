@@ -9,7 +9,7 @@ const Registrar = (props) => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const { success } = useSelector((state) => state.register);
-  const dispatch = useDispatch();
+  const dispatch = dispatch();
 
   useEffect(() => {
     if (success) {
@@ -25,7 +25,7 @@ const Registrar = (props) => {
 
   const registerHandler = async () => {
     if (email === '' || name === '' || phone === '' || password === '') {
-      setError('Por favor lleno los cuadros correspondientemente');
+      setError('Por favor llene los cuadros correspondientemente');
     }
     const user = {
       name: name,
@@ -74,11 +74,11 @@ const Registrar = (props) => {
           {error ? <Error message={error} /> : null}
         </View>
         <View style={{ marginBottom: 10 }}>
-          <Button title='Register' onPress={registerHandler} />
+          <Button title='Registrarse' onPress={registerHandler} />
         </View>
         <View>
           <Button
-            title='Back To Login'
+            title='Regresar'
             onPress={() => props.navigation.navigate('Login')}
           />
         </View>
